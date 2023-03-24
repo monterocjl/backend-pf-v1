@@ -1,0 +1,1 @@
+web: rake db:migrate && rake db:seed && bin/rails server
