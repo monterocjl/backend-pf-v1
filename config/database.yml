@@ -82,7 +82,7 @@ test:
 production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
-  port: 6027
+  port: <%= ENV["PGPORT"] %>
   database: <%= ENV["PGDATABASE"] %>
   username: <%= ENV["PGUSER"] %>
   password: <%= ENV["PGPASSWORD"] %>
