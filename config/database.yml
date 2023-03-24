@@ -82,6 +82,6 @@ test:
 production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
-  database: backend_api_rest_production
-  username: backend_api_rest
-  password: <%= ENV["BACKEND_API_REST_DATABASE_PASSWORD"] %>
+  database: <%= ENV["PGDATABASE"] %>
+  username: <%= ENV["PGUSER"] %>
+  password: <%= ENV["PGPASSWORD"] %>
