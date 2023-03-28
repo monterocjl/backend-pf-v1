@@ -24,7 +24,7 @@ class Api::V1::TablesController < ApplicationController
 
   def update
     if @table.update(table_params)
-      render :update
+      render json: {status: 200}
     else
       render json: { errors: @table.errors.full_messages }, status: :unprocessable_entity
     end
